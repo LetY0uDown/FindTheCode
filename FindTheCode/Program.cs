@@ -18,7 +18,6 @@ namespace FindTheCode
             Console.Write("\nВведите номер режима >> ");
 
             int AttemptAmount = 0, allRightCount = 0, notRightPlaceCount = 0, AttemptCount = 0;
-            string border = "----------------------------------------------------------------------";
             int[] attempts = { 1000, 12, 7, 4, 1 };
 
             if (!byte.TryParse(Console.ReadLine(), out byte mode) || mode < 1 || mode > 5)
@@ -81,7 +80,7 @@ namespace FindTheCode
                 Console.WriteLine("\nУвы, вам не удалось угадать код. Не отчаивайтесь, попробуйте ещё\n");
                 Console.WriteLine($"Количество правильных цифр на правильном месте = {allRightCount}");
                 Console.WriteLine($"Количество правильных цифр на неправильном месте = {notRightPlaceCount}\n");
-                Console.WriteLine($"{border}\n");
+                Console.WriteLine($"----------------------------------------------------------------------\n");
 
                 allRightCount = 0;
                 notRightPlaceCount = 0;
